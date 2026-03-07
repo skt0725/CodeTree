@@ -9,4 +9,6 @@ for i in range(1, m+1):
     for j in range(n):
         if coins[j] <= i and dp[i-coins[j]] != int_max:
             dp[i] = min(dp[i], dp[i-coins[j]] + 1)
-print(dp[-1])
+
+answer = dp[-1] if dp[-1] != int_max else -1
+print(answer)
