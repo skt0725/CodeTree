@@ -2,8 +2,7 @@ n = int(input())
 
 lines = [tuple(map(int, input().split())) for _ in range(n)]
 lines.sort()
-dp = [0] * n
-dp[0] = 1
+dp = [1] * n
 
 for i in range(1, n):
     for j in range(i):
