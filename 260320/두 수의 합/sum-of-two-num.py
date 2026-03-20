@@ -10,6 +10,8 @@ for i in range(n):
 answer = 0
 for key in hash:
     if k-key in hash:
-        answer += hash[key] * hash[k-key]
+        if key == k-key: 
+            answer += hash[key] * (hash[k-key] - 1)
+        else: answer += hash[key] * hash[k-key]
     
 print(answer // 2)
