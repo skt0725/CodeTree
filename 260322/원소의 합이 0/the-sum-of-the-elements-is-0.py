@@ -11,12 +11,12 @@ for number in numbers[0]:
 
 for i in range(1, 4):
     number = numbers[i]
-    keys = list(hash.keys())
-    
-    for key in keys:
+    items = list(hash.items())
+    hash = defaultdict(int)
+    for key, value in items:
         for j in range(n):
             temp = number[j] + key
-            hash[temp] += 1
+            hash[temp] += value
 print(hash[0])
         
         
