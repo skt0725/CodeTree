@@ -5,6 +5,7 @@ s = SortedSet()
 
 for _ in range(T):
     K = int(input())
+    s.clear()
     for _ in range(K):
         oper, num = tuple(input().split())
         if oper == 'I':
