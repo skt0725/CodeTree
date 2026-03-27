@@ -5,4 +5,4 @@ nums = list(map(int, input().split()))
 
 for num in nums:
     balls.remove(num)
-    print(balls[])
+    print(balls[-1])
