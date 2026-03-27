@@ -1,0 +1,8 @@
+n, m = tuple(map(int, input().split()))
+from sortedcontainers import SortedSet
+balls = SortedSet(list(range(1, m+1)))
+nums = list(map(int, input().split()))
+
+for num in nums:
+    balls.remove(num)
+    print(balls[])
