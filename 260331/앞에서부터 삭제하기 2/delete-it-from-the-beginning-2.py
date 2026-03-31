@@ -2,11 +2,9 @@ n = int(input())
 nums = list(map(int, input().split()))
 import heapq
 answer = 0
-for k in range(1, n-1):
-    arr = []
-    for num in nums[k:]:
-        heapq.heappush(arr, num)
-    heapq.heappop(arr)
-    avg = sum(arr)/len(arr)
+arr = [nums[n-1]]
+for k in range(n-2, 0, -1):
+    heapq.heappush(arr, nums[k])
+    avg = (sum(arr)-arr[0])/(len(arr)-1)
     answer = max(answer, avg)
 print(f'{answer:.2f}')
