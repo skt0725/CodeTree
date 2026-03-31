@@ -9,4 +9,4 @@ while len(arr) >= 2:
     num2 = heapq.heappop(arr)
     if num1 != num2:
         heapq.heappush(arr, num1-num2)
-print(heapq.heappop(arr) if arr else -1)
+print(-heapq.heappop(arr) if arr else -1)
