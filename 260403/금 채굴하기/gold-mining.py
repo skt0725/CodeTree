@@ -5,7 +5,7 @@ answer = 0
 
 for i in range(n):
     for j in range(n):
-        for k in range(2, n+1):
+        for k in range(1, n+1):
             temp = 0
             mine = 0
             for l in range(-k+1, k): # -k+1, -k+2, ..., k-2. k-1 => 0 (-1 0 1) (-2 -1 0 1 2)
