@@ -1,7 +1,7 @@
 n, m = tuple(map(int, input().split()))
 world = [list(map(int, input().split())) for _ in range(n)]
 
-answer = 1
+answer = 0
 
 for i in range(n):
     for j in range(n):
