@@ -17,12 +17,15 @@ for i_start in range(n):
     for j_start in range(m):
         for i_end in range(i_start, n):
             for j_end in range(j_start, m):
-                for x_start in range(i_start, n):
-                    for y_start in range(j_start, m):
+                for x_start in range(n):
+                    for y_start in range(m):
                         for x_end in range(x_start, n):
                             for y_end in range(y_start, m):
                                 if duplicate(i_end, j_end, x_start, y_start): break
                                 square_ij = square(i_start, j_start, i_end, j_end)
                                 square_xy = square(x_start, y_start, x_end, y_end)
+                                # if answer < square_ij + square_xy:
+                                #     print((i_start, j_start), (i_end, j_end), (x_start, y_start), (x_end, y_end))
+                                #     print(square_ij + square_xy)
                                 answer = max(answer, square_ij + square_xy)
 print(answer)
