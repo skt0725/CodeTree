@@ -12,7 +12,7 @@ def rectangle(i_start, j_start, i_end, j_end):
 for i_start in range(n):
     for j_start in range(m):
         for i_end in range(i_start, n):
-            for j_end in range(j_start, n):
+            for j_end in range(j_start, m):
                 num_square = rectangle(i_start, j_start, i_end, j_end)
                 answer = max(answer, num_square)
 print(answer)
