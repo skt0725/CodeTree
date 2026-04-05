@@ -26,17 +26,18 @@ for wind in winds:
     row, direc = wind
     row = int(row)-1
     shift(row, direc)
+    up_direc, low_direc = direc, direc
     for i in range(row-1, -1, -1):
-        if direc == 'R': direc = 'L'
-        else: direc = 'R'
+        if low_direc == 'R': low_direc = 'L'
+        else: low_direc = 'R'
         if check_propagate(i, i+1):
-            shift(i, direc)
+            shift(i, low_direc)
         else: break
     for j in range(row+1, n):
-        if direc == 'R': direc = 'L'
-        else: direc = 'R'
+        if up_direc == 'R': up_direc = 'L'
+        else: up_direc = 'R'
         if check_propagate(j, j-1):
-            shift(j, direc)
+            shift(j, up_direc)
         else: break
 
 for row in a:
