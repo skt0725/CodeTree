@@ -31,11 +31,15 @@ for wind in winds:
         else: direc = 'R'
         if check_propagate(i, i+1):
             shift(i, direc)
+        else: break
     for j in range(row+1, n):
         if direc == 'R': direc = 'L'
         else: direc = 'R'
         if check_propagate(j, j-1):
             shift(j, direc)
+        else: break
 
 for row in a:
     print(*row)
+   
+
