@@ -4,6 +4,7 @@ A = input()
 n = len(A)
 answer = 10000
 def incode(arr):
+    if len(arr) == 1: return 2
     cur_char = arr[0]
     rep = 1
     incode = ''
