@@ -7,6 +7,7 @@ dir = input()
 # Please write your code here.
 def process(row):
     row = list(filter(lambda x: x>0, row))
+    if not row: return [0, 0, 0, 0]
     temp = []
     cur_num = row[0]
     for i in range(1, len(row)):
