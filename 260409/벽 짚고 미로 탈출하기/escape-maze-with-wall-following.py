@@ -20,7 +20,8 @@ while True:
     new_x, new_y = cur_x + direcs[direc][0], cur_y + direcs[direc][1]
     if inrange(new_x, new_y):
         if grid[new_x][new_y] == '#':
-            direc = (direc+1) % 4
+            direc = (direc+1)%4
+
         else:
             temp_direc = (direc+3) % 4
             temp_x, temp_y = new_x + direcs[temp_direc][0], new_y + direcs[temp_direc][1]
@@ -32,11 +33,11 @@ while True:
                     cur_x, cur_y = temp_x, temp_y
                     direc = temp_direc
                     answer += 2
+            if cur_x == x and cur_y == y:
+                answer = -1
+                break
     else:
         answer += 1
-        break
-    if cur_x == x and cur_y == y:
-        answer = -1
         break
 print(answer)
 
