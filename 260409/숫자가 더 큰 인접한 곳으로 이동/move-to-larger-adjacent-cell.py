@@ -8,7 +8,7 @@ for i in range(1, n + 1):
 
 # Please write your code here.
 def inrange(x, y):
-    if 0 <= x < n and 0 <= y < n:
+    if 1 <= x <= n and 1 <= y <= n:
         return True
     return False
 direcs = [[-1, 0], [1, 0], [0, -1], [0, 1]]
