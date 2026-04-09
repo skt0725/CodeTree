@@ -14,7 +14,7 @@ for t in range(1, m+1):
     for bomb in bombs:
         r_, c_ = bomb
         for direc in direcs:
-            n_r, n_c = r_ + direc[0]*t, c_ + direc[1]*t
+            n_r, n_c = r_ + direc[0]* 2**(t-1), c_ + direc[1]* 2**(t-1)
             if inrange(n_r, n_c):
                 temp.add((n_r, n_c))
     bombs |= temp
