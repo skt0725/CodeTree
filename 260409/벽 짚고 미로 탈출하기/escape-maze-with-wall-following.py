@@ -21,7 +21,9 @@ while True:
     if inrange(new_x, new_y):
         if grid[new_x][new_y] == '#':
             direc = (direc+1)%4
-
+            if cur_x == x and cur_y == y and direc == 0:
+                answer = -1
+                break
         else:
             temp_direc = (direc+3) % 4
             temp_x, temp_y = new_x + direcs[temp_direc][0], new_y + direcs[temp_direc][1]
